@@ -8,8 +8,10 @@
   "license": "ISC",
   "author": "",
   "scripts": {
-    "dev": "concurrently -n host,feed,article,comments -c \"cyan,magenta,green,yellow\" \"npm run dev -w apps/host\" \"npm run dev -w apps/feed\" \"npm run dev -w apps/article\" \"npm run dev -w apps/comments\"",
-    "build": "npm run build --workspaces --if-present"
+    "dev": "concurrently -n host,feed -c \"cyan,magenta\" \"npm run dev -w apps/host\" \"npm run dev -w apps/feed\"",
+    "build": "npm run build -w apps/feed && npm run build -w apps/host",
+    "typecheck": "npm run build --workspaces --if-present",
+    "lint": "npm run lint --workspaces --if-present"
   },
   "devDependencies": {
     "concurrently": "^10.0.5",
