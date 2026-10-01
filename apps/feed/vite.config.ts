@@ -10,7 +10,7 @@ export default defineConfig({
       filename: "remoteEntry.js",
       exposes: {
         "./mount": "./src/remote.tsx",
-        "./Catalog": "./src/presentation/Catalog.tsx",
+        "./Catalog": "./src/presentation/catalog/index.tsx",
       },
       shared: {
         react: { singleton: true },

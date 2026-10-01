@@ -19,39 +19,5 @@ body {
   color: var(--text);
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
   line-height: 1.5;
-}
-
-.shell {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 1.5rem;
-}
-
-.shell__bar {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0.75rem 1rem;
-  background: var(--panel);
-  border: 1px solid var(--border);
-  border-radius: 10px;
-  margin-bottom: 1.5rem;
-}
-
-.shell__hint {
-  font-size: 0.75rem;
-  color: var(--muted);
-}
-
-.shell__slot h1 {
-  font-size: 1.1rem;
-  margin: 0 0 1rem;
-}
-
-.shell__error {
-  padding: 0.75rem 1rem;
-  border: 1px solid #ff6b6b;
-  border-radius: 8px;
-  color: #ff6b6b;
-  font-size: 0.9rem;
+  padding: 20px;
 }

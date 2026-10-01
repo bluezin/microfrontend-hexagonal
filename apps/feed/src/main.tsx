@@ -1,6 +1,6 @@
 import { createRoot } from "react-dom/client";
 import "./index.css";
-import Catalog from "./presentation/Catalog";
+import Catalog from "./presentation/catalog";
 
 const container = document.getElementById("root");
 

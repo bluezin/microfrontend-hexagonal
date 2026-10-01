@@ -9,13 +9,10 @@ function App() {
 
   return (
     <main>
-      <h1>Host</h1>
-
+      <h1>Mamá en Casa</h1>
+      <p>Esta es una página en donde se comparte información para mamás</p>
       <Suspense fallback={<p>Cargando feed...</p>}>
-        <Catalog
-          selectedArticleId={selectedArticleId}
-          onSelectArticle={setSelectedArticleId}
-        />
+        <Catalog />
       </Suspense>
     </main>
   );
