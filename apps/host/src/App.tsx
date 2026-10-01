@@ -1,13 +1,22 @@
-import { useState } from "react";
-import "./App.css";
+import { lazy, Suspense, useState } from "react";
+
+const Catalog = lazy(() => import("feed/Catalog"));
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [selectedArticleId, setSelectedArticleId] = useState<string | null>(
+    null,
+  );
 
   return (
-    <main style={{ fontFamily: "system-ui, sans-serif", padding: "2rem" }}>
-      <h1>Host · Shell Microfrontend</h1>
-      <p>Pronto compondré los remotos aquí.</p>
+    <main>
+      <h1>Host</h1>
+
+      <Suspense fallback={<p>Cargando feed...</p>}>
+        <Catalog
+          selectedArticleId={selectedArticleId}
+          onSelectArticle={setSelectedArticleId}
+        />
+      </Suspense>
     </main>
   );
 }
